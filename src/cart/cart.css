@@ -1,0 +1,250 @@
+ :root {
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-headline: Arial, Helvetica, sans-serif;
+    --primary-color: #e03131;
+    --secondary-color: #f2f2f2;
+    --text-dark: #333;
+    --text-light: #fff;
+    --border-color: #ccc;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    background-color: var(--secondary-color);
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-dark);
+  }
+  
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-headline);
+    margin-bottom: 0.8rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-dark);
+  }
+  
+  a:hover {
+    color: var(--primary-color);
+  }
+  
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 40px;
+    margin-right: 0.5rem;
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+  }
+  
+  .cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-icon img {
+    width: 30px;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .cart svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+ 
+  main {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .divider {
+    border-bottom: 1px solid var(--border-color);
+    margin: 1rem 0;
+  }
+  
+  .products {
+    margin-bottom: 2rem;
+  }
+  
+  .product-list {
+    list-style: none;
+  }
+  
+  .cart-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .cart-card__image {
+    grid-row: 1 / span 3;
+  }
+  
+  .cart-card__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card__name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cart-card__color {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .cart-card__quantity {
+    font-size: 1.2rem;
+  }
+  
+  .cart-card__price {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-align: right;
+  }
+  
+  .cart-footer {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    text-align: right;
+  }
+  
+  .cart-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+  
+
+  footer {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: auto;
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+    .cart-card {
+      grid-template-columns: 150px 1fr 150px;
+      grid-template-rows: auto auto auto;
+    }
+    
+    .cart-card__price {
+      grid-column: 3;
+      grid-row: 1 / span 3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .cart-card {
+      grid-template-columns: 200px 1fr 200px;
+    }
+    
+    .site-header {
+      padding: 1rem 2rem;
+    }
+    
+    main {
+      padding: 2rem;
+    }
+  } 
+
+
+  button{
+    cursor: pointer;
+    color: var(--text-light);
+  border-radius: 3px;
+  background-color: #525b0f;
+}  
+
+
